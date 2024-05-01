@@ -11,22 +11,58 @@ const userSchema = mongoose.Schema(
     email: {
       type: String,
       trim: true,
-      unique: true,
     },
     phone: {
       type: String,
       trim: true,
-      unique: true,
     },
     password: {
       type: String,
       trim: true,
       requred: true,
     },
+    bloodGroup: {
+      type: String,
+      trim: true,
+      default: null,
+    },
+    dateOfBirth: {
+      type: String,
+      trim: true,
+      default: null,
+    },
+    location: {
+      type: String,
+      trim: true,
+      default: null,
+    },
+    profaction: {
+      type: String,
+      trim: true,
+      default: null,
+    },
+    bio: {
+      type: String,
+      trim: true,
+      default: null,
+    },
+    lastDonation: {
+      type: String,
+      trim: true,
+      default: null,
+    },
     photo: {
       type: String,
       trim: true,
       default: null,
+    },
+    gallery: {
+      type: [String],
+    },
+    role: {
+      type: String,
+      default: "patient",
+      enum: ["patient", "donor", "admin"],
     },
     accessToken: {
       type: String,

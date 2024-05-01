@@ -52,18 +52,18 @@ export const randStr = (length = 12) => {
 /**
  * Dot to Hy
  */
-export const dotsToHyphens = (inputString) => {
+export const tokenEncode = (inputString) => {
   // Use the replace method with a regular expression to replace dots with hyphens
-  const stringWithHyphens = inputString.replace(/\./g, "asrafulhaq");
+  const stringWithHyphens = inputString.replace(/\./g, "blood-donate");
   return stringWithHyphens;
 };
 
 /**
  * Hypens to Dots
  */
-export const hyphensToDots = (inputString) => {
+export const tokenDecode = (inputString) => {
   // Use the replace method with a regular expression to replace hyphens with dots
-  const stringWithDots = inputString.replace(/asrafulhaq/g, ".");
+  const stringWithDots = inputString.replace(/blood-donate/g, ".");
   return stringWithDots;
 };
 
@@ -141,7 +141,7 @@ export const timeAgo = (date) => {
 /**
  * OPT
  */
-export const createOTP = (length = 5) => {
+export const createOTP = (length = 6) => {
   let otp = "";
   for (let i = 0; i < length; i++) {
     otp += Math.floor(Math.random() * 10); // Append a random digit (0-9)
